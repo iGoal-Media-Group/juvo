@@ -178,7 +178,7 @@ export const useJuvo = defineStore('juvo', {
         gross_income: formData.renda,
         professional_class_id: Number(formData.professional_class_id),
         marital_status_id: Number(formData.marital_status_id),
-        mobile_phone: formData.celular.replace(/\D/g, ''),
+        mobile_phone: formData.celular.replace(/\D/g, '').replace(/^55/, ''),
         device: {
           model: formData.device.model,
           brand_option: this.brand,
@@ -301,7 +301,7 @@ export const useJuvo = defineStore('juvo', {
         email: formData.email,
         postal_code: formData.address_postal_code,
         birthday: formData.birthdate,
-        mobile_phone: formData.celular.replace(/\D/g, ''),
+        mobile_phone: formData.celular.replace(/\D/g, '').replace(/^55/, ''),
         terms: formData.terms,
         loan_id: formData.loanId,
         origin: encryptedUrl,

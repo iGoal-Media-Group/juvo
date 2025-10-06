@@ -789,7 +789,7 @@ export default {
       this.formData.birthdate = this.formatarDataParaEnvio(this.formData.birthdate);
       if (this.formData.renda.includes('R$')) {
         const renda = Number(this.formData.renda.replace(/\D/g, '')) / 100;
-        this.formData.renda = renda.toString();
+        this.formData.renda = renda.toFixed(2);
       }
 
       if (this.validateAll()) {
