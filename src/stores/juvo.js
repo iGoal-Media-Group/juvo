@@ -172,7 +172,7 @@ export const useJuvo = defineStore('juvo', {
       const requestData = {
         full_name: formData.nome,
         email: formData.email,
-        address_postal_code: formData.address_postal_code,
+        address_postal_code: formData.address_postal_code.replace(/\D/g, ''),
         birthdate: formData.birthdate,
         cpf_number: formData.cpf.replace(/\D/g, ''),
         gross_income: formData.renda,
@@ -299,7 +299,7 @@ export const useJuvo = defineStore('juvo', {
         product: 'juvocred',
         full_name: formData.nome,
         email: formData.email,
-        postal_code: formData.address_postal_code,
+        postal_code: formData.address_postal_code.replace(/\D/g, ''),
         birthday: formData.birthdate,
         mobile_phone: formData.celular.replace(/\D/g, '').replace(/^55/, ''),
         terms: formData.terms,
