@@ -15,10 +15,10 @@ import { useJuvo } from '@/stores/juvo';
   
 export default {
   name: 'FooterLayout',
-}
   computed: {
   ...mapState(useJuvo, ['leadID'])
   }
+}
 </script>
 
 <style lang="scss" scoped>
