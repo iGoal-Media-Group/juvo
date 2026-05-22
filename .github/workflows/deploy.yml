@@ -33,14 +33,14 @@ jobs:
         SOURCE: "dist/"
         ARGS: "--delete"
 
-    - name: Slack Notification
-      uses: rtCamp/action-slack-notify@v2
-      env:
-        SLACK_CHANNEL: 'ci'
-        SLACK_USERNAME: 'CI'
-        SLACK_ICON: 'https://www.igoal.com.br/assets/images/favicon.webp'
-        SLACK_COLOR: ${{ job.status }}
-        SLACK_TITLE: "Projeto: ${{ github.event.repository.name }}"
-        SLACK_FOOTER: 'Apertem os cintos :rocket:'
-        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
-        MSG_MINIMAL: ref,commit
+    # - name: Slack Notification
+    #   uses: rtCamp/action-slack-notify@v2
+    #   env:
+    #     SLACK_CHANNEL: 'ci'
+    #     SLACK_USERNAME: 'CI'
+    #     SLACK_ICON: 'https://www.igoal.com.br/assets/images/favicon.webp'
+    #     SLACK_COLOR: ${{ job.status }}
+    #     SLACK_TITLE: "Projeto: ${{ github.event.repository.name }}"
+    #     SLACK_FOOTER: 'Apertem os cintos :rocket:'
+    #     SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
+    #     MSG_MINIMAL: ref,commit
